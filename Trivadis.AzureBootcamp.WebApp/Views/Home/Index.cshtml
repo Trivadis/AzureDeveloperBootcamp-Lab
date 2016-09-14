@@ -1,0 +1,8 @@
+﻿@model Trivadis.AzureBootcamp.WebApp.ViewModels.HomeViewModel
+
+@Html.Hidden("username", Model.Username)
+@Html.Hidden("bearertoken", Model.BearerToken)
+
+<ng-include ng-cloak src="'/App/Templates/trivadis.html'" ng-show="!shell.IsLoggedin"></ng-include>
+<ng-include ng-cloak src="'/App/Templates/chat.html'" ng-show="shell.IsLoggedin"></ng-include>
+
